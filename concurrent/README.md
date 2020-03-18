@@ -35,3 +35,6 @@ CAS（Compare Aand Swap）是现代CPU广泛支持的一种对内存中的共享
 - sleep是Thread类的静态方法。 wait是Object的方法。
 - wait会释放锁，sleep不会。
 - sleep将执行机会让给其他线程，依旧持有锁，休眠结束会进入就绪状态。wait挂其当前线程，释放锁，需要notify来唤醒进入就绪状态。
+
+
+# 阻塞队列
