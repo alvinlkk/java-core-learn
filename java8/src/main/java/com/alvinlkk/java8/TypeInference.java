@@ -1,0 +1,25 @@
+package com.alvinlkk.java8;
+
+/**
+ *
+ * 类型引用
+ *
+ * @author : alvinlkk
+ * @version V1.0
+ * @date Date : 2020-08-23 16:42
+ */
+public class TypeInference <T> {
+
+    public static <T> T defaultValue() {
+        return null;
+    }
+
+    public T getOrDefault(T value, T defaultValue) {
+        return (value != null) ? value : defaultValue;
+    }
+
+    public static void main(String[] args) {
+        final TypeInference<String> typeInference = new TypeInference<>();
+        typeInference.getOrDefault("22", TypeInference.defaultValue());
+    }
+}

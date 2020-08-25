@@ -12,6 +12,8 @@
     <module>concurrent</module>
       <module>code-pattern</module>
       <module>java-io</module>
+      <module>java-nio</module>
+      <module>java8</module>
   </modules>
 
   <name>java-core-learn</name>
