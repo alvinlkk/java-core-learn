@@ -1,6 +1,7 @@
 package com.alvinlkk.java8.methodReference;
 
 import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -32,10 +33,20 @@ public class MethodReferenceDemo {
     }
 
     /**
+     * 类名::实例方法名，若Lambda表达式的参数列表的第一个参数，是实例方法的调用者，第二个参数(或无参)是实例方法的参数时，就可以使用这种方法
+     */
+    @Test
+    public void testClassMethdoRef() {
+        //类名::实例方法名，若Lambda表达式的参数列表的第一个参数，是实例方法的调用者，第二个参数(或无参)是实例方法的参数时，就可以使用这种方法
+        BinaryOperator<String> op = String::concat;
+        System.out.println(op.apply("a", "b"));
+    }
+
+    /**
      * 实例方法引用 实例::方法
      */
     @Test
-    public void testMethodRef() {
+    public void testObjMethodRef() {
         Consumer<String> consumer1 = x -> System.out.println(x);
         consumer1.accept("alvin");
 
