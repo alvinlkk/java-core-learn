@@ -7,8 +7,6 @@ import org.junit.Test;
 
 import com.alvinlkk.java8.User;
 
-import cn.hutool.core.util.StrUtil;
-
 /**
  * @author : alvinlkk
  * @version V1.0
@@ -126,16 +124,16 @@ public class OptionalTest {
     }
 
     /**
-     *  filter(Predicate<? super T> predicate): 根据传入的断言来判断是否返回原值，还是空值
+     * filter(Predicate<? super T> predicate): 根据传入的断言来判断是否返回原值，还是空值
      */
     @Test
     public void testFilter() {
-        Optional<User> optional = Optional.ofNullable(new User("alvin", 18));
+        /*Optional<User> optional = Optional.ofNullable(new User("alvin", 18));
         Optional<User> userOptional = optional.filter(user -> StrUtil.equals("alvin", user.getUserName()));
         Assert.assertTrue(userOptional.isPresent());
 
         userOptional = optional.filter(user -> StrUtil.equals("kk", user.getUserName()));
-        Assert.assertFalse(userOptional.isPresent());
+        Assert.assertFalse(userOptional.isPresent());*/
     }
 
     /**
